@@ -1,5 +1,84 @@
 # Projeto CRUD com Laravel 11
 
+## Preparar Ambiente de Desenvolvimento
+
+### Certifique-se de ter Instalado os Programas:
+
+- PHP
+- Composer
+- Node.js (NPM)
+- MySQL Server
+- Visual Studio Code (VS Code)
+- BDeaver
+- Git
+- Criar conta no GITHUB
+
+### Certifique-se de ter Configurado o arquivo `php.ini` confirme abaixo:
+
+#### Habilitar as extensões:
+
+```
+extension=zip
+extension=fileinfo
+extension=curl
+extension=gd
+extension=mysqli
+extension=pdo_mysql
+extension=pdo_pgsql
+extension=pdo_sqlite
+extension=pgsql
+extension=sqlite3
+extension=mbstring
+extension=openssl
+```
+Sobre as extensões habilitadas:
+
+- **extension=zip**: Esta extensão permite ao PHP trabalhar com arquivos compactados no formato ZIP. Com ela, é possível criar, extrair e manipular arquivos ZIP diretamente no código PHP.
+
+- **extension=fileinfo**: A extensão fileinfo permite ao PHP acessar informações detalhadas sobre arquivos, como tipo MIME, codificação de caracteres e outros detalhes, sem depender apenas da extensão do arquivo ou da sua extensão de nome.
+
+- **extension=curl**: A extensão curl é utilizada para realizar requisições HTTP, FTP, e outras, de forma fácil e eficiente. Ela permite que o PHP interaja com outros servidores, fazendo solicitações e recebendo respostas, o que é fundamental para integração com APIs web, por exemplo.
+
+- **extension=gd**: Esta extensão permite ao PHP manipular imagens, como criar, redimensionar, cortar e aplicar efeitos em imagens. Ela é comumente usada para processamento de imagens dinâmicas em aplicações web, como gerar miniaturas de imagens, aplicar filtros ou criar gráficos.
+
+- **extension=mysqli**: A extensão mysqli (MySQL Improved) é uma melhoria sobre a extensão mysql padrão do PHP, oferecendo uma interface orientada a objetos para interagir com bancos de dados MySQL. Ela é usada para realizar operações de consulta, inserção, atualização e exclusão de dados em bancos de dados MySQL.
+
+- **extension=pdo_mysql**: A extensão pdo_mysql fornece uma interface uniforme para acessar diversos bancos de dados relacionais, incluindo o MySQL, através do PDO (PHP Data Objects). Isso permite que o código PHP seja mais portável entre diferentes sistemas de gerenciamento de banco de dados.
+
+- **extension=pdo_pgsql**: Similar à extensão pdo_mysql, esta extensão pdo_pgsql permite ao PHP interagir com bancos de dados PostgreSQL através do PDO, oferecendo uma camada de abstração para operações de banco de dados.
+
+- **extension=pdo_sqlite**: Esta extensão habilita o suporte do PDO para o SQLite, um banco de dados leve e de fácil integração com aplicações web. O PDO fornece uma maneira consistente de acessar bancos de dados, o que torna o código mais portável.
+
+- **extension=pgsql**: Essa extensão permite ao PHP interagir diretamente com bancos de dados PostgreSQL, oferecendo funções específicas para conectar, consultar e manipular dados em um banco de dados PostgreSQL.
+
+- **extension=sqlite3**: Similar à extensão pdo_sqlite, esta extensão permite ao PHP trabalhar diretamente com bancos de dados SQLite, oferecendo funções específicas para operações como criação de tabelas, inserção de dados, consultas, entre outras.
+
+- **mbstring**: Essa extensão é usada para manipulação de strings multibyte, ou seja, para trabalhar com caracteres multibyte, como os utilizados em vários idiomas além do inglês, como japonês, chinês, coreano, entre outros. Ela oferece funções para lidar com a conversão de encodings de strings, como UTF-8, e manipulação de caracteres multibyte. Isso é útil especialmente quando se trabalha com conteúdo de texto em sites multilíngues.
+
+- **openssl**: Essa extensão fornece uma interface para o OpenSSL, uma biblioteca de software usada para implementar protocolos de segurança, como HTTPS para criptografia de dados em trânsito. A extensão `openssl` permite que o PHP se comunique com servidores usando protocolos seguros, como HTTPS, e também oferece funções para criar e gerenciar chaves criptográficas, certificados SSL/TLS e realizar operações criptográficas, como criptografia e assinatura digital.
+
+#### Habilitar a exibição de erros em tela, o tipo de erro a ser reportado e o registro de logs de erros:
+
+```
+display_errors = On
+error_reporting = E_ALL
+log_errors = On
+error_log = /tmp/php_errors.log
+```
+
+#### Aumentar o limite de memória (em Mb), bem como o tempo de execução máximo de cada script (em segundos):
+
+```
+memory_limit = 256M
+max_execution_time = 120
+```
+
+#### Permitir o upload de arquivos e aumentar os limites de upload e envio de formulários:
+
+```
+session.gc_maxlifetime = 14000
+```
+
 ## Repositório base desse projeto
 
 Para criação desse projeto foi clonado o repositório **laravel11** da conta Gordin de Óculos do GitHub, que contém
